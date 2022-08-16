@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 1em;
+    --link-grid-row: auto;
+    --all-grid-template-rows: auto;
+    --link-grid-column: auto;
+    --theme-justify-content: center;
+
+}
+body{
+    background-color: hsl(229, 57%, 11%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: var(--all-grid-template-rows);
+    gap: 4em;
+    justify-content: var(--theme-justify-content);
+    align-items: center;
+    width: 80%;
+    margin: 4em auto 0;
+    color: white;
+}
+.container1{
+    grid-column: 1/2;
+    grid-row: var(--link-grid-row);
+}
+.container1 h1{
+    font-size: 3.2rem;
+    text-transform: uppercase;
+}
+.container1 p{
+    font-size: 1.2rem;
+    margin-top: 1.8rem;
+}
+.container2{
+    grid-column: 2/3;
+    grid-row: var(--link-grid-row);
+}
+.topSection{
+    background-color: hsl(248, 32%, 49%);
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 0.5em;
+    padding: 1.3em 0;
+    margin-bottom: 2em;
+    box-shadow: 0 0.5em rgba(107, 106, 106, 0.4);
+}
+.topSection p{
+    opacity: 0.8;
+}
+.bottomSection{
+    background-color: white;
+    border-radius: 0.5em;
+    border: 2px solid rgb(234, 233, 233);
+    box-shadow: 0 0.5em rgba(107, 106, 106, 0.4);
+}
+.form{
+    width: 80%;
+    margin: 2em auto;
+}
+.input{
+    padding: 1em 50% 1em 1.5em;
+    border-radius: 0.5em;
+    border: 2px solid rgb(246, 243, 243);
+    width: 100%;
+}
+.input::placeholder{
+    font-weight: 600;
+    color: gray;
+    font-size: 0.8rem;
+}
+.section{
+    margin-bottom: 1.5em;
+}
+.sectionB{
+    display: grid;
+    grid-template-columns: 2.3em 90%;
+    grid-template-rows: var(--all-grid-template-rows);
+    justify-content: var(--theme-justify-content);
+}
+.icon{
+    grid-column: 1/2;
+    grid-row: var(--link-grid-row);
+    border: 2px solid rgb(246, 243, 243);
+    border-radius:  0.5em  0 0 0.5em ;
+}
+.inputDiff{
+    grid-column: 2/3;
+    grid-row: var(--link-grid-row);
+    border: 2px solid rgb(246, 243, 243);
+    border-radius:  0 0.5em 0.5em 0;
+}
+.inputDiff::placeholder{
+    font-weight: 600;
+    color: gray;
+    font-size: 0.8rem;
+}
+.submitBtn{
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    font-weight: 700;
+    width: 100%;
+    padding: 1.2em 27.5%;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 0.5em;
+    margin: 1.3em 0 1.3em;
+    transition: all 1s linear;
+}
+.submitBtn:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    height: 4em;
+}
+.suggestion {
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+} 
+
+/* Change suggestion color when hovering it with the mouse */
+.suggestion:hover {
+    background-color: #adf;
+    cursor: pointer;
+}
+/* Position the suggestion list just below the input box */
+#suggestions {
+    position: absolute;
+    background-color: white;
+    color: black;
+    border-radius: 0.2em;
+    right: 11rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 25vh;
+} 
+img{
+    width: 2.3em;
+    height: 2.85em;
+}
+
+@media (max-width: 768px) {
+    .main{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr auto;
+        gap: 3em;
+    }
+    .container1{
+        grid-column: var(--link-grid-column);
+        grid-row: 1/2;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .container2{
+        grid-column: var(--link-grid-column);
+        grid-row: 2/3;
+    }
+    .container1 h1{
+        font-size: 2.6rem;
+    }
+    .container1 p{
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+    }
+    .sectionB{
+        grid-template-columns: 2.3em 90%;
+    }
+    .submitBtn{
+        padding: 1.2em 3em;
+        width: 100%;
+        margin: 1.3em 0 1.3em;
+    } 
+    #suggestions {
+        right: 6.5rem;
+    } 
+}

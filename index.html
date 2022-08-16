@@ -1,19 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Name of chosen challenge</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
-    <h2>make some magic here!!</h2>
 
-    <!-- // ============= EEND DO NOT EDIT ============== // -->
-    <script src="index.mjs" type="module"></script>
-    <!-- // ============= EEND DO NOT EDIT ============== // -->
+<body>
+  <main class="main">
+    <div class="container1">
+      <h1>The Phoenix Project</h1>
+      <p>The phoenix project is curated by people who want to explore ideas and diversity of the global world. To get
+        started, kindly fill the form. Thank you!
+      </p>
+    </div>
+    <div class="container2">
+      <div class="topSection">
+        <p><b>Get to know us better.</b>Thank you.</p>
+      </div>
+      <div class="bottomSection">
+        <form autocomplete="off" class="form">
+          <div class="section">
+            <input type="text" placeholder="First name" class="input">
+          </div>
+          <div class="section">
+            <input type="text" placeholder="Last name" class="input">
+          </div>
+          <div class="section">
+            <input type="email" placeholder="Email" class="input">
+          </div>
+          <div class="sectionB">
+            <img src="./solid.png" alt="networkLogo" id="icon" class="icon">
+            <input type="tel" placeholder="Phone Number" id="telephone" pattern="[0-9]{3}[0|3|4|6][0-9]{7}"
+              class="inputDiff" name="number" list="number">
+          </div>
+          <div id="suggestions"></div>
+
+          <button type="submit" class="submitBtn" id="btn">Click Here. To Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="index.mjs" type="module"></script>
 </body>
+
 </html>
