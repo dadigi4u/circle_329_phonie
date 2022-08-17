@@ -73,7 +73,7 @@ body{
     border: 2px solid rgb(246, 243, 243);
     width: 100%;
 }
-.input::placeholder{
+.diff::placeholder{
     font-weight: 600;
     color: gray;
     font-size: 0.8rem;
@@ -99,11 +99,6 @@ body{
     border: 2px solid rgb(246, 243, 243);
     border-radius:  0 0.5em 0.5em 0;
 }
-.inputDiff::placeholder{
-    font-weight: 600;
-    color: gray;
-    font-size: 0.8rem;
-}
 .submitBtn{
     background-color: hsl(154, 59%, 51%);
     color: white;
@@ -120,6 +115,11 @@ body{
     opacity: 0.7;
     cursor: pointer;
     height: 4em;
+}
+.error{
+    color: salmon;
+    font-size: 0.6rem;
+    display: none; 
 }
 .suggestion {
     padding-left: 0.3em;

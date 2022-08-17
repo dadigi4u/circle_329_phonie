@@ -9,6 +9,8 @@ const airtelNumber = ['0802', '0902', '0701', '0808', '0708', '0812'];
 const numbers = [...mtnNumber, ...gloNumber, ...nineMobile, ...airtelNumber];
 const form = document.querySelector('.form');
 const SubmitBtn = document.getElementById('btn');
+const mtnError = document.querySelector('.error');
+
 
 const inputElement = document.querySelector('#telephone');
 const autoComplete = document.querySelector('#suggestions');
@@ -52,6 +54,8 @@ inputElement.addEventListener('input', () => {
     for(let i = 0; i < mtnNumber.length; i++) {
         values === mtnNumber[i] ? image('mtn') : 0;
         if (values.length <= 3) image('solid');
+              values.length == 4 ? mtnError.style.display = 'inline' : mtnError.style.display = 'none';
+
     }
     for(let i = 0; i < gloNumber.length; i++) {
         values === gloNumber[i] ? image('glo') : 0;
